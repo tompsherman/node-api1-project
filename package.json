@@ -20,5 +20,10 @@
   "homepage": "https://github.com/tompsherman/node-api1-project#readme",
   "devDependencies": {
     "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "cuid": "^2.1.8",
+    "express": "^4.17.1",
+    "shortid": "^2.2.16"
   }
 }
