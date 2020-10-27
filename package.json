@@ -26,6 +26,7 @@
     "cors": "^2.8.5",
     "cuid": "^2.1.8",
     "express": "^4.17.1",
+    "react-router-dom": "^5.2.0",
     "shortid": "^2.2.16"
   }
 }

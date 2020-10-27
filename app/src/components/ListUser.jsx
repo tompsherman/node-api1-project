@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import CardUser from './CardUser'
+import EditUser from './EditUser'
 
 const ListUser = () => {
     const [userList, setUserList] = useState([])
