@@ -1,15 +1,26 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useState, useEffect } from 'react'
 import CardUser from './CardUser'
 
 const ListUser = () => {
+    const [userList, setUserList] = useState([])
+
+    useEffect(() => {
+        
+            axios
+            .get('http://localhost:4200/api/users')
+            .then(response => setUserList(response.data))
+            .catch(error => console.log({error}));
+      }, [userList])
+
+
     return (
         <div>
             <h2>User List</h2>
-            <CardUser />
-            {/* {
+            {
                 userList.map((user)=>(
                 <CardUser key={user.id} user={user}/>))
-            } */}
+            }
 
         </div>
     )

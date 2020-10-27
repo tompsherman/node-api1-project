@@ -3,12 +3,13 @@ console.log("hello new world, here we come!")
 // #1 - import dependencies
 const express = require('express')
 const generate = require('shortid').generate
-
+const cors = require('cors')
 // const generate = require('cuid').generate
 
 // #2 instantiate and configure server
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 // #3 - decide port
 

@@ -1,11 +1,10 @@
 import React, {useState} from 'react'
+import axios from 'axios'
 
-const AddUserForm = () => {
-
-    const [newUser, setNewUser] = useState(
-       {name: "",
-        bio: ""}
-    )
+const AddUserForm = ({URL}) => {
+    const initialFormValues = {name: "",
+    bio: ""}
+    const [newUser, setNewUser] = useState(initialFormValues)
 
     const changeHandler = (event) => {
         setNewUser({...newUser, [event.target.name]: event.target.value})
@@ -14,6 +13,12 @@ const AddUserForm = () => {
     const submitHandler = (event) => {
         event.preventDefault()
         console.log("post to database?")
+       
+        axios
+            .post('http://localhost:4200/api/users', newUser)
+            .then(response => console.log(response))
+            .catch(error => console.log({error}))
+            .finally(setNewUser(initialFormValues))
     }
     return (
         <div>

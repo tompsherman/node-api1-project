@@ -22,6 +22,8 @@
     "nodemon": "^2.0.6"
   },
   "dependencies": {
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
     "cuid": "^2.1.8",
     "express": "^4.17.1",
     "shortid": "^2.2.16"

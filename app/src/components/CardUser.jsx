@@ -9,9 +9,8 @@ const CardUser = (props) => {
     }
     return (
         <div>
-            <h3> user card </h3>
-            {/* <h4>{props.user.name}</h4>
-            <h4>{props.user.bio}</h4> */}
+            <h3>{props.user.name}</h3>
+            <h4>{props.user.bio}</h4>
             <button onClick={gotoEdit}>edit user</button>
             <button onClick={deleteUser}>delete user</button>
         </div>
